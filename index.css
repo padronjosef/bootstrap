@@ -1,22 +1,22 @@
-.text-platzi {
+.text-green {
   color: #97c93e !important;
 }
 
-.btn-platzi {
-  background-color: #97c93e;
+.btn-green {
+  background-color: #97c13e;
   color: white !important;
 }
-.btn-platzi:hover {
-  background-color: #82ad36;
+.btn-green:hover {
+  background-color: #7da032;
 }
 
-
 #header img {
-  width: 80px;
+  height: 6vh;
+  width: 200px;
 }
 
 main .carousel-inner img {
-  max-height: 70vh;
+  max-height: 90vh;
   object-fit: cover;
   filter: grayscale(70%);
 }
@@ -41,13 +41,13 @@ main .carousel-inner img {
   height: 100%;
 }
 
-#place-time {
+#about-me {
   background-color: #343A40;
   color: white;
 }
 
-#place-time img {
-  max-width: 100%;
+#about-me img {
+  max-height: 100px;
 }
 
 #footer {
@@ -55,6 +55,43 @@ main .carousel-inner img {
 }
 #footer a{
   color: #fff;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #97c93e;
+}
+
+.social-link-modal img{
+  height: 36px;
+}
+
+#social-link-modal-linkedin a,
+#social-link-modal-twitter a{
+  background: #42A5F6;
+}
+
+#social-link-modal-facebook a{
+  background: #3549AD;
+}
+
+#social-link-modal-github a{
+  background: #2B3137;
+}
+
+#social-link-modal-instagram a{
+  background: #B146C0;
+}
+
+.social-link-modal a{
+  border: 2px solid #24292E;
+}
+
+.social-link-modal:hover{
+  transform: scale(.99);
 }
 
 
+.emogi {
+  height: 28px;
+}
