@@ -59,12 +59,15 @@ main .carousel-inner img {
 #about-me img:hover {
   animation-name: agrandar;
   animation-duration: 1s;
-  animation-fill-mode: both;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 @keyframes agrandar {
-  from {transform: none}
-  to {transform: scale(1.2)}
+  0% {transform: scale(1)}
+  70% {transform: scale(1.12)}
+  100% {transform: scale(1.15)}
 }
 
 
