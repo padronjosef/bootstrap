@@ -1,13 +1,13 @@
 .text-green {
-  color: #97c93e !important;
+  color: #03A84E !important;
 }
 
 .btn-green {
-  background-color: #97c13e;
+  background-color: #03A84E;
   color: white !important;
 }
 .btn-green:hover {
-  background-color: #7da032;
+  background-color: rgb(3, 136, 63);
 }
 
 
