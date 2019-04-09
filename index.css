@@ -1,13 +1,15 @@
 .text-green {
-  color: #03A84E !important;
+  color: #0069D9 !important;
 }
 
-.btn-green {
-  background-color: #03A84E;
-  color: white !important;
+.btn-primary {
+  background-color: #0069D9;
+  color: #343A40 !important;
+  font-weight: bold;
 }
-.btn-green:hover {
-  background-color: rgb(3, 136, 63);
+.btn-primary:hover {
+  background-color: #343A40;
+  color: #0069D9 !important;
 }
 
 #header img {
@@ -22,6 +24,13 @@ main .carousel-inner img {
   height: 93vh;
   object-fit: cover;
   filter: grayscale(40%);
+}
+
+#foto-main {
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 50%;
+  filter: grayscale(75%);
 }
 
 
@@ -45,6 +54,28 @@ main .carousel-inner img {
   height: 100%;
 }
 
+#carouselExampleIndicators ol li {
+  background-color: #343A40;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+  bottom: unset;
+  top: 80px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #343A40;
+  border-radius: 50%;
+  width: 1.7em;
+  height: 1.7em;
+}
 
 
 #about-me {
