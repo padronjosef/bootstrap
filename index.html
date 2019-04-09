@@ -294,32 +294,51 @@
         </div>
         <div class="row">
           <div class="col text-center">
-            Dejame un correo si quieres que <abbr data-toggle="tooltip" title="Rapido antes que lo haga otro por ti">trabaje con tigo</abbr>.
+            Dejame un correo si quieres que <abbr data-toggle="tooltip" title="Rapido antes que lo haga otro por ti">trabaje contigo</abbr>.
             y creemos cosas geniales
           </div>
         </div>
-        <div class="row">
+        <div class="row mt-4">
           <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
-            <form>
+            <form id="contact-form">
+              <input type="hidden" name="contact_number">
               <div class="form-row">
                 <div class="form-group col-12 col-md-6">
-                  <input type="text" class="form-control" placeholder="Nombre">
+                  <label>Nombre</label>
+                  <input type="text" name="user_name" class="form-control" placeholder="Nombre">
                 </div>
+
                 <div class="form-group col-12 col-md-6">
-                  <input type="text" class="form-control" placeholder="Apellido">
+                  <label>Apellido</label>
+                  <input type="text" name="user_lastname" class="form-control" placeholder="Apellido">
                 </div>
               </div>
+
               <div class="form-row">
                 <div class="form-group col">
-                  <textarea name="text" class="form-control form-control-lg" placeholder="Tu mensaje aqui"></textarea>
+                  <label>Email</label>
+                  <input type="email" name="user_email" class="form-control" placeholder="Email">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col">
+                  <label>Tu mensaje aqui</label>
+                  <textarea type="text" name="text" class="form-control form-control-lg" placeholder="Tu mensaje aqui"></textarea>
                   <small class="form-text text-muted"> Recuerda incluir empresa, horario, rango salarial y funciones </small>
                 </div>
               </div>
+
               <div class="form-row">
                 <div class="col">
-                  <button type="button" class="btn btn-green btn-block">Enviar</button>
+                  <input type="submit" class="btn btn-green btn-block" value="Enviar">
                 </div>
               </div>
+            </form>
+            <form action="?" method="POST">
+              <div class="g-recaptcha" data-sitekey="6LeQCJ0UAAAAACSELjq60G8Tx9v3USc6HSAcpJ85"></div>
+              <br/>
+              <input type="submit" value="Submit">
             </form>
           </div>
         </div>
@@ -327,6 +346,7 @@
     </section>
     <!-- /contactame -->
 
+    
     <!-- Footer -->
     <footer id="footer" class="pb-4 pt-4">
       <div class="container">
@@ -412,6 +432,23 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script src="index.js"></script>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("user_kjZM1hD2hofBgOU4dsXlV");
+      })();
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          this.contact_number.value = Math.random() * 100000 | 0;
+          emailjs.sendForm('josepadron_go', 'respuesta_de_cv', this);
+        });
+      }
+    </script>
 
     <!--Start of Tawk.to Script-->
     <!-- <script type="text/javascript">
