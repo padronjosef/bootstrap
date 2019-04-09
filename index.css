@@ -10,20 +10,19 @@
   background-color: rgb(3, 136, 63);
 }
 
-
 #header img {
-  height: 6vh;
-  width: 200px;
+  height: 7vh;
+  max-width: 200px;
+  padding-top: 1vh;
 }
 
 
 
 main .carousel-inner img {
-  max-height: 90vh;
+  height: 93vh;
   object-fit: cover;
   filter: grayscale(40%);
 }
-
 
 
 #carousel {
