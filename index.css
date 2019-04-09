@@ -21,7 +21,7 @@
 main .carousel-inner img {
   max-height: 90vh;
   object-fit: cover;
-  filter: grayscale(70%);
+  filter: grayscale(40%);
 }
 
 
@@ -36,7 +36,7 @@ main .carousel-inner img {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   z-index: 2;
 }
@@ -89,30 +89,26 @@ main .carousel-inner img {
   height: 36px;
 }
 
-#social-link-modal-linkedin a,
-#social-link-modal-twitter a{
-  background: #42A5F6;
-}
 
-#social-link-modal-facebook a{
-  background: #3549AD;
-}
-#social-link-modal-github a{
-  background: #2B3137;
-}
-#social-link-modal-instagram a{
-  background: #B146C0;
-}
 
 .social-link-modal a{
-  border: 2px solid #24292E;
+  background: transparent;
+  color: #24292E;
+  font-weight: 700;
 }
 
 .social-link-modal:hover{
   transform: scale(.99);
 }
 
-
 .emogi {
   height: 28px;
+}
+
+#email-img-container {
+  max-width: 500px;
+}
+
+#email-img-container img {
+  width: 100%;
 }

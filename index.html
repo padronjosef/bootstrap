@@ -39,10 +39,10 @@
               <a class="nav-link" href="#about-me">Acerca de mi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#Contactame">Contactame</a>
+              <a class="nav-link" href="#Contactame">Contáctame</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-green" href="#" data-toggle="modal" data-target="#modalCompra">Sigueme</a>
+              <a class="nav-link text-green" href="#" data-toggle="modal" data-target="#modalCompra">Sígueme</a>
             </li>
           </ul>
         </div>
@@ -70,7 +70,7 @@
                 <div class="col-md-6 offset-md-6 text-center text-md-right">
                   <h2>Hola, ¿como estas?</h2>
                   <h6>
-                    Me llamo Jose Padron soy front-end developer con experiencia
+                    Me llamo José Padrón, soy front-end developer con experiencia
                     en diseño de interfaces (IU).
                   </h6>
                   <a href="assets/CV-JosePadron.pdf" class="btn btn-green">Ver CV</a>
@@ -294,14 +294,12 @@
         </div>
         <div class="row">
           <div class="col text-center">
-            Dejame un correo si quieres que <abbr data-toggle="tooltip" title="Rapido antes que lo haga otro por ti">trabaje contigo</abbr>.
-            y creemos cosas geniales
+            Dejéme un correo si quieres que <abbr data-toggle="tooltip" title="rapido antes que lo haga otro por ti">trabaje contigo</abbr>
           </div>
         </div>
         <div class="row mt-4">
           <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
-            <form id="contact-form">
-              <input type="hidden" name="contact_number">
+            <form id="contact-form" method="POST">
               <div class="form-row">
                 <div class="form-group col-12 col-md-6">
                   <label>Nombre</label>
@@ -323,23 +321,19 @@
 
               <div class="form-row">
                 <div class="form-group col">
-                  <label>Tu mensaje aqui</label>
-                  <textarea type="text" name="text" class="form-control form-control-lg" placeholder="Tu mensaje aqui"></textarea>
+                  <label>Tu mensaje aquí</label>
+                  <textarea type="text" name="text" class="form-control form-control-lg" placeholder="Tu mensaje aquí"></textarea>
                   <small class="form-text text-muted"> Recuerda incluir empresa, horario, rango salarial y funciones </small>
                 </div>
               </div>
 
               <div class="form-row">
-                <div class="col">
-                  <input type="submit" class="btn btn-green btn-block" value="Enviar">
+                <div class="col justify-content-center text-center">
+                  <input type="submit" type="button" class="mt-3 btn btn-green btn-block" value="Enviar" data-toggle="modal" data-target="#modal-enviar-correo">
                 </div>
               </div>
             </form>
-            <form action="?" method="POST">
-              <div class="g-recaptcha" data-sitekey="6LeQCJ0UAAAAACSELjq60G8Tx9v3USc6HSAcpJ85"></div>
-              <br/>
-              <input type="submit" value="Submit">
-            </form>
+
           </div>
         </div>
       </div>
@@ -361,7 +355,7 @@
     </footer>
     <!-- /Footer -->
 
-    <!-- modal -->
+    <!-- modal redes sociales -->
     <div class="modal fade" id="modalCompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -371,39 +365,39 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body p-2">
             <form action="">
               <div class="row justify-content-center" id="modal-social">
 
-                  <div id="social-link-modal-linkedin" class="col-7 col-md-6 social-link-modal pr-1 pl-1">
+                  <div id="social-link-modal-linkedin" class="col-7 col-md-5 social-link-modal pr-1 pl-1">
                     <a class="btn btn-primary btn-block mb-2" href="https://www.linkedin.com/in/josepaf/" role="button">
                       <img src="assets/icons/linkedin.svg" alt="">
                       <span>linkedin</span>
                     </a>
                   </div>
 
-                  <div id="social-link-modal-facebook" class="col-7 col-md-6 social-link-modal pr-1 pl-1">
+                  <div id="social-link-modal-facebook" class="col-7 col-md-5 social-link-modal pr-1 pl-1">
                     <a class="btn btn-primary btn-block mb-2" href="https://www.facebook.com/padronjosef" role="button">
                       <img src="assets/icons/facebook.svg" alt="">
                       <span>facebook</span>
                     </a>
                   </div>
 
-                  <div id="social-link-modal-github" class="col-7 col-md-6 social-link-modal pr-1 pl-1">
+                  <div id="social-link-modal-github" class="col-7 col-md-5 social-link-modal pr-1 pl-1">
                     <a class="btn btn-primary btn-block mb-2" href="https://github.com/padronjosef" role="button">
                       <img id="github-modal-i" src="assets/icons/github.svg" alt="">
                       <span>github</span>
                     </a>
                   </div>
 
-                  <div id="social-link-modal-instagram" class="col-7 col-md-6 social-link-modal pr-1 pl-1">
+                  <div id="social-link-modal-instagram" class="col-7 col-md-5 social-link-modal pr-1 pl-1">
                     <a class="btn btn-primary btn-block mb-2" href="https://www.instagram.com/padronjosef/" role="button">
                       <img src="assets/icons/instagram.svg" alt="">
                       <span>instagram</span>
                     </a>
                   </div>
 
-                  <div id="social-link-modal-twitter" class="col-7 col-md-6 social-link-modal pr-1 pl-1">
+                  <div id="social-link-modal-twitter" class="col-7 col-md-5 social-link-modal pr-1 pl-1">
                     <a class="btn btn-primary btn-block mb-2" href="https://twitter.com/padronjosef" role="button">
                       <img src="assets/icons/twitter.svg" alt="">
                       <span>twitter</span>
@@ -413,8 +407,8 @@
                 </div>
               </div>
             </form>
-            <div class="alert alert-warning text-center" role="alert">
-              Serás más feliz cuando me sigas <img class="emogi" src="/assets/icons/emogi.png" alt="">
+            <div class="alert alert-warning text-center m-0" role="alert">
+              Serás más felíz cuando me sigas <img class="emogi" src="assets/icons/emogi.png" alt="">
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
@@ -423,7 +417,29 @@
 
       </div>
     </div>
-    <!-- /modal -->
+    <!-- /modal redes sociales -->
+
+    <!-- modal correo enviado -->
+      <div class="modal fade" id="modal-enviar-correo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title" id="exampleModalLongTitle">Tu correo ha sido enviado</h6>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="email-img-container" class="modal-body">
+              <img src="assets/icons/email.png" alt="">
+              <small class="form-text text-muted mt-4 col">Dentro de poco me pondre en contacto contigo</small>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- /modal correo enviado -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -431,38 +447,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <script src="index.js"></script>
-
     <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-    <script type="text/javascript">
-      (function(){
-        emailjs.init("user_kjZM1hD2hofBgOU4dsXlV");
-      })();
-    </script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script type="text/javascript">
-      window.onload = function() {
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-          event.preventDefault();
-          this.contact_number.value = Math.random() * 100000 | 0;
-          emailjs.sendForm('josepadron_go', 'respuesta_de_cv', this);
-        });
-      }
-    </script>
 
-    <!--Start of Tawk.to Script-->
-    <!-- <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/5cab0c93557d5f68515b6ea1/default';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script> -->
-    <!--End of Tawk.to Script-->
+    <script src="index.js"></script>
   
   </body>
 </html>

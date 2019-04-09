@@ -1,25 +1,24 @@
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
-})
-
-const $form = document.getElementById('contact-form');
-
-$("#contact-form").on("submit", function(event) {
-  event.preventDefault(); // prevent reload
-  
-  var formData = new FormData(this);
-  formData.append('service_id', 'josepadron_go');
-  formData.append('template_id', 'respuesta_de_cv');
-  formData.append('user_id', 'user_kjZM1hD2hofBgOU4dsXlV');
-
-  $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
-      type: 'POST',
-      data: formData,
-      contentType: false, // auto-detection
-      processData: false // no need to parse formData to string
-  }).done(function() {
-      alert('Your mail is sent!');
-  }).fail(function(error) {
-      alert('Oops... ' + JSON.stringify(error));
-  });
 });
+
+(function(){
+  emailjs.init("user_kjZM1hD2hofBgOU4dsXlV");
+})();
+
+window.onload = function() {
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    emailjs.sendForm('josepadron_go', 'respuesta_de_cv', this)
+    // .then(function(response) {
+    //   if(response.text === 'OK'){
+    //     alert('El correo se ha enviado de forma exitosa');
+    //     console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+    //   }}, 
+      
+    //   function(err) {
+    //     alert('Ocurrió un problema al enviar el correo');
+    //     console.log("FAILED. error=", err);
+    // });
+  });
+}
