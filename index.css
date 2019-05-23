@@ -84,8 +84,9 @@ main .carousel-inner img {
 }
 
 #about-me img {
-  max-height: 120px;
+  max-height: 100px;
 }
+
 #about-me img:hover {
   animation-name: agrandar;
   animation-duration: 1s;
